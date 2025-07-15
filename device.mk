@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/duchamp
+LOCAL_PATH := device/xiaomi/rodin
 
 # Hidl Service
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
@@ -17,8 +17,8 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 31
-PRODUCT_TARGET_VNDK_VERSION := 34
+PRODUCT_SHIPPING_API_LEVEL := 35
+PRODUCT_TARGET_VNDK_VERSION := 35
 
 # A/B
 AB_OTA_UPDATER := true
@@ -37,7 +37,7 @@ AB_OTA_PARTITIONS += \
     logo \
     mcf_ota \
     mcupm \
-    md1img \
+    modem \
     mvpu_algo \
     odm \
     odm_dlkm \
@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service    
 
 PRODUCT_PACKAGES := \
-    bootctrl.mt6897 \
+    bootctrl.mt6899 \
     libgptutils \
     libz \
     libcutils \

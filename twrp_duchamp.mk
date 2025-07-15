@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from duchamp device
-$(call inherit-product, device/xiaomi/duchamp/device.mk)
+# Inherit from rodin device
+$(call inherit-product, device/xiaomi/rodin/device.mk)
 
 # Configure launch_with_vendor_ramdisk.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -21,10 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Configure emulated_storage.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-PRODUCT_DEVICE := duchamp
-PRODUCT_NAME := twrp_duchamp
+PRODUCT_DEVICE := rodin
+PRODUCT_NAME := twrp_rodin
 PRODUCT_BRAND := POCO
-PRODUCT_MODEL := 2311DRK48G
+PRODUCT_MODEL := 2412DPC0AG
 PRODUCT_MANUFACTURER := xiaomi
 
 # Hide Reflash TWRP & FUSE passthrough

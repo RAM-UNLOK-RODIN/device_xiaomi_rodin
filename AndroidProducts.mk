@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_duchamp.mk
+    $(LOCAL_DIR)/twrp_rodin.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_duchamp-eng
+    twrp_rodin-eng
