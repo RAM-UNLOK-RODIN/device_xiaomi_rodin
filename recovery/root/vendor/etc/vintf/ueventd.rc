@@ -32,6 +32,9 @@
 /dev/block/by-name/md1dsp    0660    root    system
 /dev/block/by-name/boot_para 0640    root    system
 
+# blackbox
+/dev/block/by-name/blackbox  0660    root    system
+
 # OTP
 /dev/otp                  0660   system     system
 /dev/block/by-name/otp       0660    root    system
@@ -85,13 +88,11 @@
 /dev/wmtWifi              0660   wifi     wifi
 /dev/fw_log_wifi          0660   wifi     wifi
 /dev/fw_log_ics           0660   wifi     wifi
+/dev/sa_log_wifi          0660   wifi     wifi
 /dev/coredump_wifi        0440   system   system
 
 # FMRadio
 /dev/fm                   0660   media     media
-
-# OpenDSP
-/dev/audio_ipi            0640   media     media
 
 # ConnFem
 /dev/connfem              0660   system     system
@@ -105,6 +106,7 @@
 
 # Trusty driver
 /dev/trusty-ipc-dev0      0660   system     system
+/dev/trusty-ipc-dev1      0660   system     system
 /dev/nebula-ipc-dev0      0660   system     system
 
 # RPMB (for Trusty)
@@ -125,6 +127,10 @@
 
 #v4l2 codec
 /dev/vcu    0660 camera system
+/dev/mtk_ccd    0660 camera system
+/dev/flashlight  0660 camera system
+/dev/camera-dpe  0660 camera system
+/dev/camera-pda  0660 camera system
 
 #fmt mode
 /dev/vdec-fmt    0660 media system
@@ -145,6 +151,9 @@
 # cpu hotplug
 /sys/devices/system/cpu/cpu* cpufreq/sugov_ext/down_rate_limit_us 0664 system system
 /sys/devices/system/cpu/cpu* cpufreq/sugov_ext/up_rate_limit_us 0664 system system
+
+# gzvm for AVF
+/dev/gzvm 0666 root root
 
 # add the read write right of ttyUSB*
 /dev/bus/usb/*     	  0660   root       usb
@@ -210,6 +219,7 @@
 /dev/dma_heap/mtk_mm-uncached               0444   system     system
 /dev/dma_heap/mtk_svp_page-uncached                 0444   system     system
 /dev/dma_heap/mtk_prot_page-uncached                0444   system     system
+/dev/dma_heap/mtk_sapu_page-uncached                0444   system     system
 /dev/dma_heap/mtk_svp_region                        0444   system     system
 /dev/dma_heap/mtk_svp_region-aligned                0444   system     system
 /dev/dma_heap/mtk_prot_region                       0444   system     system
@@ -223,6 +233,8 @@
 /dev/dma_heap/mtk_sapu_data_shm_region-aligned      0444   system     system
 /dev/dma_heap/mtk_sapu_engine_shm_region            0444   system     system
 /dev/dma_heap/mtk_sapu_engine_shm_region-aligned    0444   system     system
+/dev/dma_heap/mtk_sapu_page-uncached                0444   system     system
+/dev/dma_heap/mtk_slc                               0444   system     system
 
 #touch
 /dev/touch                0660   root       system
@@ -240,6 +252,7 @@
 
 #hbt
 /dev/hbt       0600 root   root
+/dev/vhbt      0600 root   root
 
 #sensor
 /dev/hf_manager        0660    system    system
@@ -250,3 +263,4 @@
 #elliptic sensor
 /dev/elliptic0            0644   system     system
 /dev/elliptic1            0644   system     system
+
